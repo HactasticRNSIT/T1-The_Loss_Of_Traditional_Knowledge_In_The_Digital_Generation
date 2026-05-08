@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { FloatingBackground } from '../ui/FloatingBackground';
 import { Navbar } from './Navbar';
 import { Sidebar } from './Sidebar';
+import { ChatPopup } from '../chat/ChatPopup';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export const RootLayout = () => {
@@ -18,7 +19,7 @@ export const RootLayout = () => {
       <Navbar />
       <div className="flex flex-1 overflow-hidden">
         {isDashboardRoute && <Sidebar />}
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto relative">
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
@@ -31,6 +32,7 @@ export const RootLayout = () => {
               <Outlet />
             </motion.div>
           </AnimatePresence>
+          <ChatPopup />
         </main>
       </div>
     </FloatingBackground>

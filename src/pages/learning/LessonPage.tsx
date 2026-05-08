@@ -43,11 +43,7 @@ export const LessonPage = () => {
             Extracting Neem Oil
           </h1>
           
-          <img 
-            src="https://images.unsplash.com/photo-1611078516599-2782e2c07ef9?auto=format&fit=crop&q=80&w=800" 
-            alt="Mortar and pestle" 
-            className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-md"
-          />
+
 
           <div className="prose prose-lg dark:prose-invert prose-earth max-w-none font-sans text-earth-700 dark:text-earth-300">
             <p>

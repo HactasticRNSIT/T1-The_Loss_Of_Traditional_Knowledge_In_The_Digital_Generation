@@ -20,11 +20,7 @@ export const ModuleDetailsPage = () => {
       {/* Hero Banner */}
       <div className="relative h-64 md:h-80 w-full bg-forest-900 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-earth-900/90 to-transparent z-10" />
-        <img 
-          src="https://images.unsplash.com/photo-1590412200988-a436970781fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-          alt="Neem"
-          className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-overlay"
-        />
+
         <div className="absolute top-4 left-4 z-20">
           <button 
             onClick={() => navigate('/modules')}

@@ -5,7 +5,8 @@ import { Leaf, Menu, User, LogIn } from 'lucide-react';
 export const Navbar = () => {
   const location = useLocation();
   const isAuthPage = location.pathname.includes('/login') || location.pathname.includes('/signup');
-  const isAuthenticated = false; // Mock state
+  const isLandingPage = location.pathname === '/';
+  const isAuthenticated = !isLandingPage; // Consider user authenticated if not on landing page
 
   if (isAuthPage) return null;
 
@@ -34,9 +35,6 @@ export const Navbar = () => {
           </Link>
           <Link to="/leaderboard" className="text-sm font-medium text-earth-600 hover:text-forest-600 dark:text-earth-300 dark:hover:text-forest-400 transition-colors">
             Leaderboard
-          </Link>
-          <Link to="/chat" className="text-sm font-medium text-earth-600 hover:text-forest-600 dark:text-earth-300 dark:hover:text-forest-400 transition-colors">
-            Elder Guide
           </Link>
         </nav>
 

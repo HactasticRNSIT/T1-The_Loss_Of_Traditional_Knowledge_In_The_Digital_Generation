@@ -58,20 +58,19 @@ export const ModulesPage = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <Card hoverable className="h-full flex flex-col group overflow-hidden" onClick={() => navigate(`/modules/${mod.id}`)}>
-              <div className="relative h-48 -mx-6 -mt-6 mb-4 bg-earth-200 dark:bg-earth-800 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 group-hover:to-black/70 transition-colors" />
-                <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                   <Badge className="bg-white/90 text-earth-900 border-none shadow-sm backdrop-blur-md dark:bg-earth-900/90 dark:text-earth-100">
-                     <BookOpen className="h-3 w-3 mr-1 inline" /> {mod.time}
-                   </Badge>
-                   <Badge variant="xp" className="bg-terracotta-500 text-white border-none shadow-sm backdrop-blur-md">
-                     +{mod.xp} XP
-                   </Badge>
-                </div>
-              </div>
+            <Card hoverable className="h-full flex flex-col group" onClick={() => navigate(`/modules/${mod.id}`)}>
               <div className="flex-1 flex flex-col">
-                <Badge variant="category" className="w-fit mb-3">{mod.category}</Badge>
+                <div className="flex items-center justify-between mb-4">
+                  <Badge variant="category" className="w-fit">{mod.category}</Badge>
+                  <div className="flex items-center gap-2">
+                    <span className="flex items-center text-[10px] font-bold uppercase tracking-wider text-earth-500 dark:text-earth-400">
+                      <BookOpen className="h-3 w-3 mr-1" /> {mod.time}
+                    </span>
+                    <Badge variant="xp" className="bg-terracotta-500/10 text-terracotta-600 border-terracotta-200 dark:bg-terracotta-500/20 dark:text-terracotta-400 dark:border-terracotta-800">
+                      +{mod.xp} XP
+                    </Badge>
+                  </div>
+                </div>
                 <h3 className="font-serif text-xl font-bold text-earth-900 dark:text-earth-100 mb-2">{mod.title}</h3>
                 <p className="text-sm text-earth-600 dark:text-earth-400 mb-6 flex-1">{mod.desc}</p>
                 <ProgressBar progress={mod.progress} showLabel variant={mod.progress === 100 ? 'default' : 'warning'} />

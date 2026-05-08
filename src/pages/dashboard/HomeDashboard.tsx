@@ -50,21 +50,22 @@ export const HomeDashboard = () => {
       >
         <h2 className="font-serif text-2xl font-semibold text-earth-900 dark:text-earth-100 mb-4">Continue Learning</h2>
         <Card hoverable className="flex flex-col md:flex-row gap-6 items-center p-6 bg-gradient-to-r from-forest-50 to-white dark:from-forest-900/20 dark:to-earth-900/40" onClick={() => navigate('/lesson/1')}>
-          <div className="h-32 w-full md:w-48 shrink-0 rounded-xl bg-forest-200 dark:bg-forest-800 overflow-hidden relative">
-             <div className="absolute inset-0 bg-black/20 flex items-center justify-center transition-opacity hover:opacity-100 opacity-0 cursor-pointer">
-               <div className="h-12 w-12 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center">
-                 <Play className="h-6 w-6 text-white ml-1" />
-               </div>
-             </div>
-          </div>
           <div className="flex-1 w-full space-y-3">
             <div className="flex items-center justify-between">
-              <Badge variant="category">Herbal Medicine</Badge>
+              <div className="flex items-center gap-3">
+                <Badge variant="category">Herbal Medicine</Badge>
+                <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-forest-100/50 dark:bg-forest-900/50 border border-forest-200 dark:border-forest-800">
+                  <Play className="h-3 w-3 text-forest-600 dark:text-forest-400" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-forest-700 dark:text-forest-300">Resume Lesson</span>
+                </div>
+              </div>
               <Badge variant="xp">+50 XP</Badge>
             </div>
-            <h3 className="font-serif text-xl font-semibold text-earth-900 dark:text-earth-100">The Healing Properties of Neem</h3>
-            <p className="text-sm text-earth-600 dark:text-earth-400 line-clamp-2">Learn about the ancient uses of the Neem tree in traditional remedies and modern applications.</p>
-            <ProgressBar progress={65} variant="success" showLabel />
+            <h3 className="font-serif text-2xl font-bold text-earth-900 dark:text-earth-100">The Healing Properties of Neem</h3>
+            <p className="text-earth-600 dark:text-earth-400 line-clamp-2 italic font-serif">"The village pharmacy in a single tree..."</p>
+            <div className="pt-2">
+              <ProgressBar progress={65} variant="success" showLabel />
+            </div>
           </div>
         </Card>
       </motion.div>
@@ -86,10 +87,9 @@ export const HomeDashboard = () => {
             { title: "Folk Stories & Morals", desc: "Oral traditions passed down generations.", progress: 100, category: "Culture" },
           ].map((mod, idx) => (
             <Card hoverable key={idx} className="flex flex-col gap-4 cursor-pointer" onClick={() => navigate('/modules/2')}>
-              <div className="h-40 w-full rounded-xl bg-earth-200 dark:bg-earth-800" />
-              <div className="flex-1 space-y-2">
+              <div className="flex-1 space-y-3">
                 <Badge variant="category">{mod.category}</Badge>
-                <h3 className="font-serif text-lg font-semibold text-earth-900 dark:text-earth-100">{mod.title}</h3>
+                <h3 className="font-serif text-lg font-bold text-earth-900 dark:text-earth-100">{mod.title}</h3>
                 <p className="text-sm text-earth-600 dark:text-earth-400">{mod.desc}</p>
               </div>
               <ProgressBar progress={mod.progress} variant={mod.progress === 100 ? 'default' : 'warning'} />

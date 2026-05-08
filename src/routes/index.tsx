@@ -27,7 +27,6 @@ export const router = createBrowserRouter([
       { path: 'modules/:id', element: <ModuleDetailsPage /> },
       { path: 'lesson/:id', element: <LessonPage /> },
       { path: 'quiz/:id', element: <QuizPage /> },
-      { path: 'chat', element: <AIChatbotPage /> },
       { path: 'profile', element: <ProfilePage /> },
       { path: 'leaderboard', element: <LeaderboardPage /> },
     ],

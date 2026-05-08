@@ -7,7 +7,6 @@ export const Sidebar = () => {
     { icon: Home, label: 'Home', path: '/dashboard' },
     { icon: BookOpen, label: 'Learn', path: '/modules' },
     { icon: Trophy, label: 'Leaderboard', path: '/leaderboard' },
-    { icon: MessageSquare, label: 'Elder Guide', path: '/chat' },
     { icon: User, label: 'Profile', path: '/profile' },
   ];
 
