@@ -1,20 +1,4 @@
 """
-╔══════════════════════════════════════════════════════════════════════╗
-║     DADI KI BAATEIN — Knowledge Base Builder v3.0                    ║
-║     Handles JS-rendered sites + Wikipedia API + Seed Data            ║
-╚══════════════════════════════════════════════════════════════════════╝
-
-INSTALL DEPENDENCIES FIRST:
-    pip install requests beautifulsoup4 lxml tqdm wikipedia-api selenium
-
-FOR JS SITES (indianculture.gov.in):
-    Install ChromeDriver: https://chromedriver.chromium.org/
-    OR run in --no-selenium mode which uses Wikipedia + seed data only
-
-USAGE:
-    python knowledge_scraper_v2.py              # full mode (needs ChromeDriver)
-    python knowledge_scraper_v2.py --no-selenium # Wikipedia + seed only
-"""
 
 import requests
 import json
