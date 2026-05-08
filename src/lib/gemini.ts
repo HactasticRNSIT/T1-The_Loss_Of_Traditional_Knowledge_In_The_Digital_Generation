@@ -16,21 +16,36 @@ export async function getEmbedding(text: string) {
 /**
  * 2. RAG GENERATION
  * Takes a user question and a list of retrieved "knowledge snippets".
- * Augments the prompt with this context.
+ * Augments the prompt with this context, prioritizing dadi_story and gen_z_hook for style.
  */
 export async function generateRAGResponse(question: string, contextSnippets: string[]) {
   const model = genAI.getGenerativeModel({ 
     model: "gemini-1.5-flash",
-    systemInstruction: "You are a Traditional Knowledge Guide. Use only the provided context to answer. If the answer is not in the context, say you don't know based on our records, but suggest related cultural wisdom."
+    systemInstruction: `
+      You are the "Wisdom Guide," a bridge between ancient traditional knowledge and modern Gen-Z lifestyle.
+      Your tone is:
+      - Authentically cultural (like a wise elder or "Dadi").
+      - Digitally savvy (understand modern trends and sustainability).
+      - Practical and evidence-based (include scientific backing if provided).
+
+      Rules:
+      1. Use the provided context to answer. 
+      2. If "dadi_story" is available, use its warm, storytelling tone.
+      3. If "gen_z_hook" is available, use it to connect with younger audiences.
+      4. Always highlight "modern_relevance" or "scientific_backing" to show why this tradition matters today.
+      5. If the answer is not in the context, be honest but suggest related wisdom from the context.
+    `
   });
 
   const contextText = contextSnippets.join("\n\n---\n\n");
   const prompt = `
-    CONTEXT FROM TRADITIONAL KNOWLEDGE DATABASE:
+    KNOWLEDGE BASE CONTEXT:
     ${contextText}
 
-    USER QUESTION:
+    USER QUERY:
     ${question}
+
+    Help the user by applying this traditional wisdom to their modern life.
   `;
 
   const result = await model.generateContent(prompt);
