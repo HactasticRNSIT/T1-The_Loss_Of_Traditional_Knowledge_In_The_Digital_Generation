@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, Mic, Sparkles, X, MessageSquare, Minimize2, Maximize2 } from 'lucide-react';
+import { Send, Sparkles, X, MessageSquare, Minimize2, Maximize2 } from 'lucide-react';
 import { Card } from '../ui/Card';
-import { Button } from '../ui/Button';
+import { useRagChat } from '../../hooks/useRagChat';
+import { searchKnowledgeBase } from '../../services/ragSearchService';
+import { generateRAGResponse } from '../../lib/gemini';
 
 type Message = {
   id: string;
@@ -19,6 +21,7 @@ export const ChatPopup = () => {
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
+  const { askQuestion } = useRagChat();
 
   useEffect(() => {
     if (isOpen && !isMinimized) {
@@ -26,25 +29,30 @@ export const ChatPopup = () => {
     }
   }, [messages, isTyping, isOpen, isMinimized]);
 
-  const handleSend = (e?: React.FormEvent) => {
+  const handleSend = async (e?: React.FormEvent) => {
     e?.preventDefault();
-    if (!input.trim()) return;
+    if (!input.trim() || isTyping) return;
 
     const userMsg: Message = { id: Date.now().toString(), role: 'user', text: input };
     setMessages(prev => [...prev, userMsg]);
+    const question = input;
     setInput('');
     setIsTyping(true);
 
-    // Mock AI response
-    setTimeout(() => {
-      const elderMsg: Message = {
-        id: (Date.now() + 1).toString(),
-        role: 'elder',
-        text: 'The ancestors say: "He who learns, teaches." Your curiosity honors our traditions. Let me share a tale about that...'
-      };
-      setMessages(prev => [...prev, elderMsg]);
+    try {
+      const result = await askQuestion(question, searchKnowledgeBase);
+      const answer = result?.answer || await generateRAGResponse(question, []);
+      setMessages(prev => [...prev, { id: (Date.now() + 1).toString(), role: 'elder', text: answer }]);
+    } catch {
+      try {
+        const answer = await generateRAGResponse(question, []);
+        setMessages(prev => [...prev, { id: (Date.now() + 1).toString(), role: 'elder', text: answer }]);
+      } catch {
+        setMessages(prev => [...prev, { id: (Date.now() + 1).toString(), role: 'elder', text: 'Forgive me, young one. The spirits are quiet today. Please try again later.' }]);
+      }
+    } finally {
       setIsTyping(false);
-    }, 2000);
+    }
   };
 
   const SUGGESTED_PROMPTS = [
@@ -59,12 +67,7 @@ export const ChatPopup = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ 
-              opacity: 1, 
-              scale: 1, 
-              y: 0,
-              height: isMinimized ? '64px' : '500px'
-            }}
+            animate={{ opacity: 1, scale: 1, y: 0, height: isMinimized ? '64px' : '500px' }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             className="w-[350px] md:w-[400px] pointer-events-auto"
           >
@@ -84,16 +87,10 @@ export const ChatPopup = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-1">
-                  <button 
-                    onClick={(e) => { e.stopPropagation(); setIsMinimized(!isMinimized); }}
-                    className="p-1.5 text-earth-400 hover:text-earth-600 dark:hover:text-earth-200 transition-colors"
-                  >
+                  <button onClick={(e) => { e.stopPropagation(); setIsMinimized(!isMinimized); }} className="p-1.5 text-earth-400 hover:text-earth-600 dark:hover:text-earth-200 transition-colors">
                     {isMinimized ? <Maximize2 className="h-4 w-4" /> : <Minimize2 className="h-4 w-4" />}
                   </button>
-                  <button 
-                    onClick={(e) => { e.stopPropagation(); setIsOpen(false); }}
-                    className="p-1.5 text-earth-400 hover:text-earth-600 dark:hover:text-earth-200 transition-colors"
-                  >
+                  <button onClick={(e) => { e.stopPropagation(); setIsOpen(false); }} className="p-1.5 text-earth-400 hover:text-earth-600 dark:hover:text-earth-200 transition-colors">
                     <X className="h-4 w-4" />
                   </button>
                 </div>
@@ -101,19 +98,11 @@ export const ChatPopup = () => {
 
               {!isMinimized && (
                 <>
-                  {/* Chat Area */}
                   <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0 bg-paper-light/30 dark:bg-paper-dark/10">
                     {messages.map((msg) => (
-                      <div
-                        key={msg.id}
-                        className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-                      >
-                        <div className={`max-w-[85%] rounded-2xl p-3 text-sm ${
-                          msg.role === 'user' 
-                            ? 'bg-forest-600 text-white rounded-br-sm shadow-sm' 
-                            : 'bg-earth-100 dark:bg-earth-800 text-earth-900 dark:text-earth-100 rounded-bl-sm border border-earth-200 dark:border-earth-700'
-                        }`}>
-                          <p className="leading-relaxed">{msg.text}</p>
+                      <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                        <div className={`max-w-[85%] rounded-2xl p-3 text-sm ${msg.role === 'user' ? 'bg-forest-600 text-white rounded-br-sm shadow-sm' : 'bg-earth-100 dark:bg-earth-800 text-earth-900 dark:text-earth-100 rounded-bl-sm border border-earth-200 dark:border-earth-700'}`}>
+                          <p className="leading-relaxed whitespace-pre-wrap">{msg.text}</p>
                         </div>
                       </div>
                     ))}
@@ -129,35 +118,19 @@ export const ChatPopup = () => {
                     <div ref={endRef} />
                   </div>
 
-                  {/* Input Area */}
                   <div className="p-4 border-t border-earth-200 dark:border-earth-800 bg-white dark:bg-earth-950">
                     {messages.length === 1 && (
                       <div className="flex flex-wrap gap-2 mb-3">
                         {SUGGESTED_PROMPTS.map((prompt, i) => (
-                          <button
-                            key={i}
-                            onClick={() => setInput(prompt)}
-                            className="text-[10px] px-2 py-1 rounded-full border border-earth-200 dark:border-earth-700 bg-earth-50 hover:bg-earth-100 dark:bg-earth-900 dark:hover:bg-earth-800 text-earth-700 dark:text-earth-300 transition-colors"
-                          >
+                          <button key={i} onClick={() => setInput(prompt)} className="text-[10px] px-2 py-1 rounded-full border border-earth-200 dark:border-earth-700 bg-earth-50 hover:bg-earth-100 dark:bg-earth-900 dark:hover:bg-earth-800 text-earth-700 dark:text-earth-300 transition-colors">
                             {prompt}
                           </button>
                         ))}
                       </div>
                     )}
-                    
                     <form onSubmit={handleSend} className="flex gap-2">
-                      <input
-                        type="text"
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        placeholder="Ask the Elder Guide..."
-                        className="flex-1 bg-earth-50 dark:bg-earth-900 border border-earth-200 dark:border-earth-700 rounded-xl px-3 py-2 text-sm outline-none focus:border-forest-500 focus:ring-1 focus:ring-forest-500 text-earth-900 dark:text-earth-100 transition-all"
-                      />
-                      <button 
-                        type="submit" 
-                        disabled={!input.trim()}
-                        className="p-2 bg-forest-600 text-white rounded-xl hover:bg-forest-700 disabled:opacity-50 transition-colors"
-                      >
+                      <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Ask the Elder Guide..." className="flex-1 bg-earth-50 dark:bg-earth-900 border border-earth-200 dark:border-earth-700 rounded-xl px-3 py-2 text-sm outline-none focus:border-forest-500 focus:ring-1 focus:ring-forest-500 text-earth-900 dark:text-earth-100 transition-all" />
+                      <button type="submit" disabled={!input.trim() || isTyping} className="p-2 bg-forest-600 text-white rounded-xl hover:bg-forest-700 disabled:opacity-50 transition-colors">
                         <Send className="h-4 w-4" />
                       </button>
                     </form>
@@ -169,7 +142,6 @@ export const ChatPopup = () => {
         )}
       </AnimatePresence>
 
-      {/* Floating Trigger Button */}
       {!isOpen && (
         <motion.button
           initial={{ scale: 0, rotate: -45 }}

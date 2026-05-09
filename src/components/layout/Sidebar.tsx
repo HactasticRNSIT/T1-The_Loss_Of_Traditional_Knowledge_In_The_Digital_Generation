@@ -1,8 +1,12 @@
 import { NavLink } from 'react-router-dom';
-import { Home, BookOpen, Trophy, MessageSquare, User } from 'lucide-react';
+import { Home, BookOpen, Trophy, User } from 'lucide-react';
 import { cn } from '../../utils/utils';
+import { useAuth } from '../../hooks/AuthContext';
 
 export const Sidebar = () => {
+  const { user, profile } = useAuth();
+  const streak = profile?.streak ?? user?.streak ?? 0;
+
   const navItems = [
     { icon: Home, label: 'Home', path: '/dashboard' },
     { icon: BookOpen, label: 'Learn', path: '/modules' },
@@ -38,7 +42,9 @@ export const Sidebar = () => {
             <span className="text-terracotta-600 font-bold dark:text-terracotta-400">🔥</span>
           </div>
           <div>
-            <p className="text-sm font-semibold text-earth-900 dark:text-earth-100">12 Day Streak!</p>
+            <p className="text-sm font-semibold text-earth-900 dark:text-earth-100">
+              {streak > 0 ? `${streak} Day Streak!` : 'Start a Streak!'}
+            </p>
             <p className="text-xs text-earth-500 dark:text-earth-400">Keep learning to grow.</p>
           </div>
         </div>

@@ -1,15 +1,32 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { Leaf, UserPlus } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
+import { useAuth } from '../../hooks/AuthContext';
 
 export const SignupPage = () => {
   const navigate = useNavigate();
+  const { signUp } = useAuth();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleSignup = (e: React.FormEvent) => {
+  const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
-    navigate('/dashboard');
+    setError(null);
+    setLoading(true);
+    try {
+      await signUp(email, password, name);
+      navigate('/dashboard');
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Sign up failed. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -29,11 +46,20 @@ export const SignupPage = () => {
             <p className="mt-2 text-earth-600 dark:text-earth-400">Start your journey into traditional wisdom.</p>
           </div>
 
+          {error && (
+            <div className="mb-4 rounded-xl border border-terracotta-200 bg-terracotta-50 p-3 text-sm text-terracotta-700 dark:border-terracotta-800 dark:bg-terracotta-900/30 dark:text-terracotta-400">
+              {error}
+            </div>
+          )}
+
           <form onSubmit={handleSignup} className="space-y-4">
             <div>
               <label className="mb-1.5 block text-sm font-medium text-earth-700 dark:text-earth-300">Username</label>
               <input
                 type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
                 className="w-full rounded-xl border border-earth-200 bg-earth-50/50 px-4 py-3 text-earth-900 outline-none transition-all focus:border-earth-500 focus:ring-2 focus:ring-earth-500/20 dark:border-earth-700 dark:bg-earth-800/50 dark:text-earth-100"
                 placeholder="villager123"
               />
@@ -42,6 +68,9 @@ export const SignupPage = () => {
               <label className="mb-1.5 block text-sm font-medium text-earth-700 dark:text-earth-300">Email</label>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 className="w-full rounded-xl border border-earth-200 bg-earth-50/50 px-4 py-3 text-earth-900 outline-none transition-all focus:border-earth-500 focus:ring-2 focus:ring-earth-500/20 dark:border-earth-700 dark:bg-earth-800/50 dark:text-earth-100"
                 placeholder="elder@village.com"
               />
@@ -50,11 +79,14 @@ export const SignupPage = () => {
               <label className="mb-1.5 block text-sm font-medium text-earth-700 dark:text-earth-300">Password</label>
               <input
                 type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
                 className="w-full rounded-xl border border-earth-200 bg-earth-50/50 px-4 py-3 text-earth-900 outline-none transition-all focus:border-earth-500 focus:ring-2 focus:ring-earth-500/20 dark:border-earth-700 dark:bg-earth-800/50 dark:text-earth-100"
                 placeholder="••••••••"
               />
             </div>
-            <Button type="submit" className="w-full mt-6" size="lg" variant="secondary">
+            <Button type="submit" className="w-full mt-6" size="lg" variant="secondary" isLoading={loading} disabled={loading}>
               <UserPlus className="mr-2 h-5 w-5" /> Sign Up
             </Button>
           </form>

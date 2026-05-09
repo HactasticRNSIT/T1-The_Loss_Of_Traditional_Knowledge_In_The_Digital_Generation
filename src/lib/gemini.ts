@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI, Part } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
@@ -8,7 +8,7 @@ const genAI = new GoogleGenerativeAI(API_KEY);
  * Converts text into a vector (768 dimensions) for RAG.
  */
 export async function getEmbedding(text: string) {
-  const model = genAI.getGenerativeModel({ model: "text-embedding-004" });
+  const model = genAI.getGenerativeModel({ model: "gemini-embedding-2" });
   const result = await model.embedContent(text);
   return result.embedding.values;
 }
@@ -20,7 +20,7 @@ export async function getEmbedding(text: string) {
  */
 export async function generateRAGResponse(question: string, contextSnippets: string[]) {
   const model = genAI.getGenerativeModel({ 
-    model: "gemini-1.5-flash",
+    model: "gemini-2.5-flash",
     systemInstruction: `
       You are the "Wisdom Guide," a bridge between ancient traditional knowledge and modern Gen-Z lifestyle.
       Your tone is:
@@ -59,7 +59,7 @@ export async function generateRAGResponse(question: string, contextSnippets: str
  */
 export function startContextualChat(taskTitle: string, taskContent: string) {
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-2.5-flash",
     systemInstruction: `
       You are an interactive guide for the activity: "${taskTitle}".
       Here is the information the user is currently looking at:
@@ -82,7 +82,7 @@ export function startContextualChat(taskTitle: string, taskContent: string) {
  * Useful for when you have a long story and need to break it into pieces.
  */
 export async function embedKnowledgeChunks(chunks: string[]) {
-  const model = genAI.getGenerativeModel({ model: "text-embedding-004" });
+  const model = genAI.getGenerativeModel({ model: "gemini-embedding-2" });
   const result = await model.batchEmbedContents({
     requests: chunks.map((text) => ({
       content: { role: "user", parts: [{ text }] },

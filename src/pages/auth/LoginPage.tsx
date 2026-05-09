@@ -1,15 +1,31 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { Leaf, LogIn } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
+import { useAuth } from '../../hooks/AuthContext';
 
 export const LoginPage = () => {
   const navigate = useNavigate();
+  const { signIn } = useAuth();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    navigate('/dashboard');
+    setError(null);
+    setLoading(true);
+    try {
+      await signIn(email, password);
+      navigate('/dashboard');
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Sign in failed. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -29,11 +45,20 @@ export const LoginPage = () => {
             <p className="mt-2 text-earth-600 dark:text-earth-400">Continue your journey of wisdom.</p>
           </div>
 
+          {error && (
+            <div className="mb-4 rounded-xl border border-terracotta-200 bg-terracotta-50 p-3 text-sm text-terracotta-700 dark:border-terracotta-800 dark:bg-terracotta-900/30 dark:text-terracotta-400">
+              {error}
+            </div>
+          )}
+
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
               <label className="mb-1.5 block text-sm font-medium text-earth-700 dark:text-earth-300">Email</label>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 className="w-full rounded-xl border border-earth-200 bg-earth-50/50 px-4 py-3 text-earth-900 outline-none transition-all focus:border-earth-500 focus:ring-2 focus:ring-earth-500/20 dark:border-earth-700 dark:bg-earth-800/50 dark:text-earth-100"
                 placeholder="elder@village.com"
               />
@@ -42,11 +67,14 @@ export const LoginPage = () => {
               <label className="mb-1.5 block text-sm font-medium text-earth-700 dark:text-earth-300">Password</label>
               <input
                 type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
                 className="w-full rounded-xl border border-earth-200 bg-earth-50/50 px-4 py-3 text-earth-900 outline-none transition-all focus:border-earth-500 focus:ring-2 focus:ring-earth-500/20 dark:border-earth-700 dark:bg-earth-800/50 dark:text-earth-100"
                 placeholder="••••••••"
               />
             </div>
-            <Button type="submit" className="w-full mt-6" size="lg">
+            <Button type="submit" className="w-full mt-6" size="lg" isLoading={loading} disabled={loading}>
               <LogIn className="mr-2 h-5 w-5" /> Sign In
             </Button>
           </form>

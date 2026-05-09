@@ -1,14 +1,22 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Leaf, Menu, User, LogIn } from 'lucide-react';
+import { Leaf, Menu, User, LogIn, LogOut } from 'lucide-react';
+import { useAuth } from '../../hooks/AuthContext';
 
 export const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, profile, signOut } = useAuth();
   const isAuthPage = location.pathname.includes('/login') || location.pathname.includes('/signup');
-  const isLandingPage = location.pathname === '/';
-  const isAuthenticated = !isLandingPage; // Consider user authenticated if not on landing page
+  const isAuthenticated = !!user;
+  const level = profile?.level ?? user?.level ?? 1;
 
   if (isAuthPage) return null;
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate('/');
+  };
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-earth-200/50 bg-white/60 backdrop-blur-md dark:border-earth-800/50 dark:bg-earth-900/60">
@@ -40,10 +48,18 @@ export const Navbar = () => {
 
         <div className="flex items-center gap-4">
           {isAuthenticated ? (
-            <Link to="/profile" className="flex items-center gap-2 rounded-full border border-earth-200 bg-white px-3 py-1.5 hover:bg-earth-50 dark:border-earth-700 dark:bg-earth-800 dark:hover:bg-earth-700/80 transition-colors">
-              <User className="h-4 w-4 text-earth-600 dark:text-earth-300" />
-              <span className="text-sm font-medium text-earth-800 dark:text-earth-200">Level 5</span>
-            </Link>
+            <>
+              <Link to="/profile" className="flex items-center gap-2 rounded-full border border-earth-200 bg-white px-3 py-1.5 hover:bg-earth-50 dark:border-earth-700 dark:bg-earth-800 dark:hover:bg-earth-700/80 transition-colors">
+                <User className="h-4 w-4 text-earth-600 dark:text-earth-300" />
+                <span className="text-sm font-medium text-earth-800 dark:text-earth-200">Level {level}</span>
+              </Link>
+              <button
+                onClick={handleSignOut}
+                className="flex items-center gap-2 rounded-full border border-earth-200 bg-white px-3 py-1.5 hover:bg-earth-50 dark:border-earth-700 dark:bg-earth-800 dark:hover:bg-earth-700/80 transition-colors text-sm font-medium text-earth-600 dark:text-earth-300"
+              >
+                <LogOut className="h-4 w-4" />
+              </button>
+            </>
           ) : (
             <Link to="/login" className="flex items-center gap-2 rounded-full bg-forest-600 px-4 py-2 text-sm font-medium text-white hover:bg-forest-700 transition-colors shadow-sm shadow-forest-600/20">
               <LogIn className="h-4 w-4" />

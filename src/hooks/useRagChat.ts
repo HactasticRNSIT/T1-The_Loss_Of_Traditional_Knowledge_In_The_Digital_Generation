@@ -15,7 +15,7 @@ export const ragService = {
    * @param question The user's query
    * @param searchFn A function that takes a vector and returns string snippets (to be plugged into Supabase later)
    */
-  async ask(question: string, searchFn: (vector: number[]) => Promise<string[]>) {
+  async ask(question: string, searchFn: (vector: number[], text: string) => Promise<string[]>) {
     try {
       // Step 1: Get the embedding for the question
       console.log('--- RAG: Step 1: Embedding Question ---');
@@ -23,7 +23,7 @@ export const ragService = {
 
       // Step 2: Retrieve relevant context (This is where Supabase/DB comes in)
       console.log('--- RAG: Step 2: Retrieving Context ---');
-      const relevantContext = await searchFn(questionVector);
+      const relevantContext = await searchFn(questionVector, question);
 
       if (!relevantContext || relevantContext.length === 0) {
         console.warn('RAG: No relevant context found in database.');
@@ -54,7 +54,7 @@ export function useRagChat() {
 
   const askQuestion = async (
     question: string, 
-    searchFn: (vector: number[]) => Promise<string[]>
+    searchFn: (vector: number[], text: string) => Promise<string[]>
   ) => {
     setIsLoading(true);
     setError(null);

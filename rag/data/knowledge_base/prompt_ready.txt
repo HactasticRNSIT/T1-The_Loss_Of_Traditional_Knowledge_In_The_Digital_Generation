@@ -261,7 +261,7 @@ SOURCE: https://www.tkdl.res.in
 TITLE: Ayurveda
 DOMAIN: Ayurveda
 SUMMARY: Ayurveda (; IAST: āyurveda) is an alternative medicine system with historical roots in the Indian subcontinent. It is heavily practised throughout India and Nepal, where as much as 80% of the population report using ayurveda. Ayurveda has been adapted for Western consumption, notably by Baba Hari Dass in the 1970s and Maharishi ayurveda in the 1980s.
-INGREDIENTS: Haritaki, Ashwagandha, Tulsi, Cardamom, Triphala, Cinnamon, Bibhitaki, Milk
+INGREDIENTS: Cardamom, Tulsi, Bibhitaki, Cinnamon, Haritaki, Triphala, Ashwagandha, Milk
 HEALTH BENEFITS: Digestion, Sleep, Stress, Skin, Joint, Pain, Fever, Cold, Cough, Diabetes, Weight, Detox, Heart, Wounds
 SCIENCE: Analgesic: Pain-relieving
 DOSHA: Vata, Pitta, Kapha
@@ -292,7 +292,7 @@ SOURCE: https://en.wikipedia.org/wiki/Dinacharya
 TITLE: Charaka Samhita
 DOMAIN: Ayurveda
 SUMMARY: The Charaka Samhita (Sanskrit: चरक संहिता, romanized: Caraka-Saṃhitā, lit. 'Compendium of Charaka') is a Sanskrit text on Ayurveda (Indian traditional medicine), attributed to Charaka (c. 1st–2nd century CE) and later revised by Dṛḍhabala.
-INGREDIENTS: Honey, Milk
+INGREDIENTS: Milk, Honey
 HEALTH BENEFITS: Skin, Pain
 DOSHA: Vata, Pitta, Kapha
 GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
@@ -334,7 +334,7 @@ SOURCE: https://en.wikipedia.org/wiki/Ocimum_tenuiflorum
 TITLE: Turmeric
 DOMAIN: Home Remedies
 SUMMARY: Turmeric (), or Curcuma longa (), is a flowering plant in the ginger family Zingiberaceae. It is a perennial, rhizomatous, herbaceous plant native to the Indian subcontinent and Southeast Asia that requires temperatures between 20 and 30 °C (68 and 86 °F) and high annual rainfall to thrive. Plants are gathered each year for their rhizomes, some for propagation in the following season and some for consumption or dyeing.
-INGREDIENTS: Ghee, Mustard, Black Pepper, Ginger, Brahmi, Saffron, Haldi, Turmeric, Pomegranate, Milk, Cumin
+INGREDIENTS: Ghee, Haldi, Saffron, Brahmi, Ginger, Cumin, Pomegranate, Mustard, Black Pepper, Milk, Turmeric
 HEALTH BENEFITS: Hair, Pain, Weight, Liver, Inflammation
 SCIENCE: Curcumin: Active in turmeric (anti-inflammatory)
 GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
@@ -355,7 +355,7 @@ SOURCE: https://en.wikipedia.org/wiki/Azadirachta_indica
 TITLE: Triphala
 DOMAIN: Ayurveda
 SUMMARY: Triphala (Hindi: त्रिफला; Sanskrit: त्रिफला, triphalā, "three fruits") is a polyherbal Ayurvedic formulation, specifically a churna or powder, a kwatha or decoction or infusion produced from chebulic myrobalan (Sanskrit: हरीतकी, harītakī; Hindi: हरीतकी, haritaki), beleric myrobalan (Sanskrit: विभीतकी, vibhītakī; Hindi: बिभीतकी, bibhitaki), and emblic myrobalan (Sanskrit: आमलकी, āmalakī; Hindi: आँवला, ā̃vlā). Containing vitamin C, it is considered an Ayurvedic rasayana formula when the dried and powdered fruit are prepared in a 1:1:1 or 1:2:3 ratio. It is one of the most common Ayurvedic treatments in the world because of its ability to balance all three "doshas" simultaneously.
-INGREDIENTS: Haritaki, Ghee, Honey, Triphala, Bibhitaki
+INGREDIENTS: Ghee, Bibhitaki, Honey, Haritaki, Triphala
 HEALTH BENEFITS: Stress, Liver
 SCIENCE: Antimicrobial: Kills microorganisms; Anti-Inflammatory: Reduces inflammation; Antioxidant: Fights free radicals / cell aging
 GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
@@ -395,7 +395,7 @@ SOURCE: https://en.wikipedia.org/wiki/Bacopa_monnieri
 TITLE: Curcumin
 DOMAIN: Ayurveda
 SUMMARY: Curcumin is a bright yellow chemical produced by the plant species Curcuma longa. It is the principal curcuminoid of turmeric (Curcuma longa), a member of the ginger family, Zingiberaceae. It is sold as an herbal supplement, cosmetics ingredient, food flavoring, and food coloring.
-INGREDIENTS: Ginger, Turmeric, Mustard, Cumin
+INGREDIENTS: Cumin, Mustard, Turmeric, Ginger
 HEALTH BENEFITS: Liver
 SCIENCE: Curcumin: Active in turmeric (anti-inflammatory)
 GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
@@ -406,7 +406,7 @@ SOURCE: https://en.wikipedia.org/wiki/Curcumin
 TITLE: Moringa oleifera
 DOMAIN: Home Remedies
 SUMMARY: Moringa oleifera is a short-lived, fast-growing, drought-resistant tree of the family Moringaceae, native to northern India and used extensively in South and Southeast Asia. Common names include moringa, drumstick tree (from the long, slender, triangular seed-pods), horseradish tree (from the taste of the roots, which resembles horseradish), or malunggay (as known in maritime or archipelagic areas in Asia). It is widely cultivated for its young seed pods and leaves, used as vegetables and for traditional herbal medicine.
-INGREDIENTS: Moringa, Mustard, Honey, Turmeric, Cumin, Milk, Coriander
+INGREDIENTS: Honey, Cumin, Moringa, Mustard, Milk, Turmeric, Coriander
 HEALTH BENEFITS: Skin, Hair, Weight
 GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
 SOURCE: https://en.wikipedia.org/wiki/Moringa_oleifera
@@ -416,7 +416,7 @@ SOURCE: https://en.wikipedia.org/wiki/Moringa_oleifera
 TITLE: Nigella sativa
 DOMAIN: Food & Culture
 SUMMARY: Nigella sativa (common names, black caraway, black cumin, nigella, charnushka, or kalonji) is an annual flowering plant in the family Ranunculaceae, native to western Asia (Arabia, the Levant, Cyprus, Turkey, Iran and Iraq), and eastern Europe (Bulgaria and Romania). It is naturalised over parts of Europe, northern Africa, and east to Myanmar. It is used as a spice in various food preparations.
-INGREDIENTS: Coriander, Nutmeg, Cumin
+INGREDIENTS: Cumin, Nutmeg, Coriander
 HEALTH BENEFITS: Blood Pressure, Cholesterol
 GEN_Z_HOOK: This carries 3000 years of ancestral memory. No cap. 🌶️
 SOURCE: https://en.wikipedia.org/wiki/Nigella_sativa
@@ -426,10 +426,155 @@ SOURCE: https://en.wikipedia.org/wiki/Nigella_sativa
 TITLE: Centella asiatica
 DOMAIN: Home Remedies
 SUMMARY: Centella asiatica, commonly known as Indian pennywort, Asiatic pennywort, spadeleaf, coinwort or gotu kola, is a herbaceous, perennial plant in the flowering plant family Apiaceae. It is native to tropical regions of Africa, Asia, Australia, and islands in the western Pacific Ocean. It is consumed as a culinary vegetable and is used in traditional medicine.
-INGREDIENTS: Brahmi, Garlic, Turmeric, Coconut Oil, Lemon, Milk
+INGREDIENTS: Brahmi, Lemon, Garlic, Coconut Oil, Milk, Turmeric
 HEALTH BENEFITS: Skin, Hair, Cold, Liver, Wounds
 GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
 SOURCE: https://en.wikipedia.org/wiki/Centella_asiatica
+
+---
+
+TITLE: Gymnema sylvestre
+DOMAIN: Ayurveda
+SUMMARY: Gymnema sylvestre is a perennial woody vine native to Asia (including the Arabian Peninsula), Africa and Australia. Common names include gymnema, Australian cowplant, and Periploca of the woods, and the Hindi term gurmar, which means "sugar destroyer" The leaves and extracts contain gymnemic acids, the major bioactive constituents that interact with taste receptors on the tongue to temporarily suppress the taste of sweetness. Description The plant is a climber with leaves having soft hairs on the upper surface.
+HEALTH BENEFITS: Hair, Cough, Weight
+SCIENCE: Antimicrobial: Kills microorganisms; Antioxidant: Fights free radicals / cell aging
+GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
+SOURCE: https://en.wikipedia.org/wiki/Gymnema_sylvestre
+
+---
+
+TITLE: Boswellia serrata
+DOMAIN: Ayurveda
+SUMMARY: Boswellia serrata is a plant that produces Indian frankincense. The plant is native to much of India and the Punjab region that extends into Pakistan. Sustainability Boswellia serrata is currently at risk of being eradicated because of non-sustainable practices.
+HEALTH BENEFITS: Joint, Pain
+GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
+SOURCE: https://en.wikipedia.org/wiki/Boswellia_serrata
+
+---
+
+TITLE: Terminalia chebula
+DOMAIN: Home Remedies
+SUMMARY: Terminalia chebula, commonly known as black- or chebulic myrobalan, is a species of Terminalia, native to South Asia from India, Pakistan and Nepal east to southwest China (Yunnan), and south to Sri Lanka, Malaysia, and Vietnam. Taxonomy Swedish naturalist Anders Jahan Retzius described the species in Observ. chebula – leaves and shoots hairless, or only hairy when very young T.
+INGREDIENTS: Haritaki, Triphala
+HEALTH BENEFITS: Hair
+SCIENCE: Antibacterial: Fights harmful bacteria
+GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
+SOURCE: https://en.wikipedia.org/wiki/Terminalia_chebula
+
+---
+
+TITLE: Terminalia bellirica
+DOMAIN: Ayurveda
+SUMMARY: Terminalia bellirica, known as bahera, beleric or bastard myrobalan, is a large deciduous tree in the family Combretaceae. It is common on the plains and lower hills in South and Southeast Asia, where it is also grown as an avenue tree. The basionym is Myrobalanus bellirica Gaertn.
+INGREDIENTS: Long Pepper, Bibhitaki, Triphala, Neem
+HEALTH BENEFITS: Skin
+GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
+SOURCE: https://en.wikipedia.org/wiki/Terminalia_bellirica
+
+---
+
+TITLE: Aloe vera
+DOMAIN: Home Remedies
+SUMMARY: Aloe vera () is a succulent plant species of the genus Aloe. It is widely distributed, and is considered an invasive species in many world regions. An evergreen perennial, it originates from the Arabian Peninsula, but also grows wild in tropical, semi-tropical, and arid climates around the world.
+INGREDIENTS: Aloe Vera
+HEALTH BENEFITS: Skin, Pain, Cold, Diabetes, Weight, Kidney, Heart, Wounds
+GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
+SOURCE: https://en.wikipedia.org/wiki/Aloe_vera
+
+---
+
+TITLE: Cinnamomum verum
+DOMAIN: Home Remedies
+SUMMARY: Cinnamomum verum (synonym Cinnamomum zeylanicum), also known as true cinnamon or Ceylon cinnamon is a small evergreen tree belonging to the family Lauraceae, native to Sri Lanka. The inner bark of the tree is historically regarded as the spice cinnamon, though this term was later generalized to include C. Description Cinnamomum verum trees are 10–15 m (30–50 ft) tall.
+INGREDIENTS: Cinnamon
+GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
+SOURCE: https://en.wikipedia.org/wiki/Cinnamomum_verum
+
+---
+
+TITLE: Elettaria cardamomum
+DOMAIN: Food & Culture
+SUMMARY: Elettaria cardamomum, commonly known as green cardamom or true cardamom, is a herbaceous, perennial plant in the ginger family, native to southern India. It is the most common of the species whose seeds are used as a spice called cardamom that has a strong aroma used in both savory and sweet cooking. It is cultivated widely in tropical regions and reportedly naturalized in Réunion, Indochina, and Costa Rica.
+INGREDIENTS: Cardamom, Ginger
+HEALTH BENEFITS: Kidney
+GEN_Z_HOOK: This carries 3000 years of ancestral memory. No cap. 🌶️
+SOURCE: https://en.wikipedia.org/wiki/Elettaria_cardamomum
+
+---
+
+TITLE: Commiphora wightii
+DOMAIN: Ayurveda
+SUMMARY: Commiphora wightii, with common names Indian bdellium-tree, gugal, guggal, guggul, gugul, or mukul myrrh tree, is a flowering plant in the family Burseraceae, which produces a fragrant resin called gugal, guggul or gugul, that is used in incense and vedic medicine (or ayurveda). The species is native to western India, from where it was introduced westward to southern Pakistan and the middle-east. It prefers arid and semi-arid climates and is tolerant of poor soil.
+HEALTH BENEFITS: Cholesterol, Liver
+GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
+SOURCE: https://en.wikipedia.org/wiki/Commiphora_wightii
+
+---
+
+TITLE: Mucuna pruriens
+DOMAIN: Sustainable Farming
+SUMMARY: Mucuna pruriens is a tropical legume native to Africa and tropical Asia and widely naturalized and cultivated. Its English common names include monkey tamarind, velvet bean, Bengal velvet bean, Florida velvet bean, Mauritius velvet bean, Yokohama velvet bean, cowage, cowitch, lacuna bean, and Lyon bean. The plant is notorious for the extreme itchiness it produces on contact, particularly with the young foliage and the seed pods.
+HEALTH BENEFITS: Skin, Hair, Weight
+GEN_Z_HOOK: Zero-waste farming, invented before zero-waste was a trend. 🌱
+SOURCE: https://en.wikipedia.org/wiki/Mucuna_pruriens
+
+---
+
+TITLE: Plumbago zeylanica
+DOMAIN: Ayurveda
+SUMMARY: Plumbago zeylanica, commonly known as Ceylon leadwort, doctorbush or wild leadwort, is a species of plumbago with a pantropical distribution. Carl Linnaeus described the paleotropical P. scandens as separate species, but they are currently considered synonymous.
+INGREDIENTS: Cumin
+GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
+SOURCE: https://en.wikipedia.org/wiki/Plumbago_zeylanica
+
+---
+
+TITLE: Tribulus terrestris
+DOMAIN: Sustainable Farming
+SUMMARY: Tribulus terrestris is an annual plant in the caltrop family (Zygophyllaceae) widely distributed around the world. It is adapted to thrive in dry climate locations in which few other plants can survive. It is native to warm temperate and tropical regions in southern Eurasia and Africa.
+INGREDIENTS: Lemon, Milk
+HEALTH BENEFITS: Stress, Skin, Hair, Pain, Energy, Liver
+GEN_Z_HOOK: Zero-waste farming, invented before zero-waste was a trend. 🌱
+SOURCE: https://en.wikipedia.org/wiki/Tribulus_terrestris
+
+---
+
+TITLE: Asparagus racemosus
+DOMAIN: Home Remedies
+SUMMARY: Asparagus racemosus (shatavari, asparagus fern) is a species of asparagus native from Africa through southern Asia, including the Indian subcontinent, to northern Australia. It grows 1–2 m (3 ft 3 in – 6 ft 7 in) tall and prefers to take root in gravelly, rocky soils high up in piedmont plains, at 1,300–1,400 m (4,300–4,600 ft) elevation. It was botanically described in 1799.88 Description Asparagus racemosus is a climber having stems up to 4 m long.
+HEALTH BENEFITS: Cold
+GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
+SOURCE: https://en.wikipedia.org/wiki/Asparagus_racemosus
+
+---
+
+TITLE: Pueraria tuberosa
+DOMAIN: Sustainable Farming
+SUMMARY: Pueraria tuberosa, commonly known as kudzu, Indian kudzu, or Nepalese kudzu, Vidarikand, Sanskrit: Bhukushmandi (भूकुशमंडी) is a climber with woody tuberculated stem. It is a climbing, coiling and trailing vine with large tuberous roots. The tubers are globose or pot-like, about 25 centimetres (9.8 in) across and the insides are white, starchy and mildly sweet.
+HEALTH BENEFITS: Hair
+GEN_Z_HOOK: Zero-waste farming, invented before zero-waste was a trend. 🌱
+SOURCE: https://en.wikipedia.org/wiki/Pueraria_tuberosa
+
+---
+
+TITLE: Acorus calamus
+DOMAIN: Home Remedies
+SUMMARY: Acorus calamus (also called sweet flag, sway or muskrat root, among many other common names) is a species of flowering plant with psychoactive chemicals. It is a tall wetland monocot of the family Acoraceae, in the genus Acorus. Although used in traditional medicine over centuries to treat digestive disorders and pain, it has no clinical evidence of safety or efficacy and may be toxic if ingested, and so has been commercially banned for use in food in the United States.
+INGREDIENTS: Cinnamon
+HEALTH BENEFITS: Pain
+SCIENCE: Eugenol: Active in cloves (antimicrobial)
+GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
+SOURCE: https://en.wikipedia.org/wiki/Acorus_calamus
+
+---
+
+TITLE: Boerhavia diffusa
+DOMAIN: Ayurveda
+SUMMARY: Boerhavia diffusa is a species of flowering plant in the four o'clock family which is commonly known as punarnava (meaning that which rejuvenates or renews the body in Ayurveda), red spiderling, spreading hogweed, or tarvine. It is taken in herbal medicine for pain relief and other uses. The leaves of Boerhavia diffusa are often used as a green vegetable in many parts of India.
+HEALTH BENEFITS: Pain
+SCIENCE: Immunomodulatory: Boosts immune system
+GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
+SOURCE: https://en.wikipedia.org/wiki/Boerhavia_diffusa
 
 ---
 
@@ -500,6 +645,104 @@ SOURCE: https://en.wikipedia.org/wiki/Meditation
 
 ---
 
+TITLE: Bhastrika
+DOMAIN: Yoga
+SUMMARY: Bhastrikā is an important breath exercise in yoga and pranayama. It is sometimes treated as a kriya or 'cleansing action' along with kapalabhati to clear the airways in preparation for other pranayama techniques. Bhastrika involves a rapid and forceful process of inhalation and exhalation powered by the movement of the diaphragm.
+HEALTH BENEFITS: Energy
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Bhastrika
+
+---
+
+TITLE: Ujjayi
+DOMAIN: Yoga
+SUMMARY: Ujjayi (Sanskrit: उज्जायी, IAST ujjāyī, "victorious" or "conquering") is a pranayama (breathing technique) practised simultaneously with asanas in modern yoga as exercise. It is practised especially in Pattabhi Jois's Ashtanga (vinyasa) yoga, where it accompanies vigorous asana flow exercise. It is described as a seated practice in B.
+HEALTH BENEFITS: Blood Pressure
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Ujjayi
+
+---
+
+TITLE: Patanjali
+DOMAIN: Yoga
+SUMMARY: Patanjali (Sanskrit: पतञ्जलि, IAST: Patañjali, Sanskrit pronunciation: [pɐtɐɲdʑɐli]; also called Gonardiya or Gonikaputra) was the name of one or more author(s), mystic(s) and philosopher(s) in ancient India. His name is recorded as an author and compiler of a number of Sanskrit works. The greatest of these are the Yoga Sutras, a classical yoga text.
+INGREDIENTS: Brahmi
+DOSHA: Vata
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Patanjali
+
+---
+
+TITLE: Nadi (yoga)
+DOMAIN: Yoga
+SUMMARY: 'tube, pipe, nerve, blood vessel, pulse') is a term for the channels through which, in traditional Indian medicine and spiritual theory, the energies such as prana of the physical body, the subtle body and the causal body are said to flow. Within this philosophical framework, the nadis are said to connect at special points of intensity, the chakras. All nadis are said to originate from one of two centres; the heart and the kanda, the latter being an egg-shaped bulb in the pelvic area, just below the navel.
+HEALTH BENEFITS: Hair, Energy, Heart
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Nadi_(yoga)
+
+---
+
+TITLE: Shavasana
+DOMAIN: Yoga
+SUMMARY: Shavasana (Sanskrit: शवासन; IAST: śavāsana), Corpse Pose, or Mritasana, is an asana in hatha yoga and modern yoga as exercise, often used for relaxation at the end of a session. It is the usual pose for the practice of yoga nidra meditation, and is an important pose in Restorative Yoga. Etymology and origins The name Shavasana is from Sanskrit शव Śava, "corpse" and आसन Āsana, "posture" or "seat".
+HEALTH BENEFITS: Sleep, Stress, Pain
+DOSHA: Vata
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Shavasana
+
+---
+
+TITLE: Tadasana
+DOMAIN: Yoga
+SUMMARY: Tadasana (Sanskrit: ताड़ासन, romanized: Tāḍāsana), Mountain pose or Samasthiti (Sanskrit: समस्थिति; IAST: samasthitiḥ) is a standing asana in modern yoga as exercise; it is not described in medieval hatha yoga texts. It is the basis for several other standing asanas. Etymology and origins Tāḍāsana is from the Sanskrit words ताड tāḍa, "mountain" and आसन āsana meaning "posture" or "seat".
+HEALTH BENEFITS: Weight
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Tadasana
+
+---
+
+TITLE: Padmasana
+DOMAIN: Yoga
+SUMMARY: Padmasana is a term derived from Sanskrit word padma: lotus, and āsana: seat or throne, and may refer to: Lotus throne in Hindu–Buddhist art Lotus position in yoga Mayurasana in yoga Padmasana (shrine), a type of Balinese Hindu shrine See also Padma (disambiguation) Asana (disambiguation)
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Padmasana
+
+---
+
+TITLE: Bakasana
+DOMAIN: Yoga
+SUMMARY: Bakasana (Crane pose) (Sanskrit: बकासन, IAST: bakāsana), and the similar Kakasana (Crow pose) (Sanskrit: काकासन, IAST: kākasana) are balancing asanas in hatha yoga and modern yoga as exercise. In all variations, these are arm balancing poses in which hands are planted on the floor, shins rest upon upper arms, and feet lift up. The poses are often confused, but traditionally Kakasana has arms bent, Bakasana (the crane being the taller bird with longer legs) has the arms straight.
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Bakasana
+
+---
+
+TITLE: Sarvangasana
+DOMAIN: Yoga
+SUMMARY: Sarvangasana (Sanskrit: सर्वाङ्गासन, romanized: sarvāṅgāsana), Shoulder stand, or more fully Salamba Sarvangasana (Supported Shoulder stand), is an inverted asana in modern yoga as exercise; similar poses were used in medieval hatha yoga as a mudra. Many named variations exist, including with legs in lotus position and Supta Konasana with legs wide apart, toes on the ground. Sarvāṅgāsana has been nicknamed the "queen" or "mother" of all the asanas.
+HEALTH BENEFITS: Hair, Cold, Blood Pressure, Heart
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Sarvangasana
+
+---
+
+TITLE: Chakrasana
+DOMAIN: Yoga
+SUMMARY: Chakrasana (Sanskrit: चक्रासन, romanized: Cakrāsana, lit. 'Wheel Pose') or Urdhva Dhanurasana (Sanskrit: ऊर्ध्वधनुरासन, romanized: Ūrdhvadhanurāsana, lit. 'Upward-Facing Bow Pose') is a backbending asana in yoga as exercise.
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Chakrasana
+
+---
+
+TITLE: Paschimottanasana
+DOMAIN: Yoga
+SUMMARY: Pashchimottanasana (Sanskrit: पश्चिमोत्तानासन, romanized: paścimottānāsana), Seated Forward Bend, or Intense Dorsal Stretch is a seated forward-bending asana in hatha yoga and modern yoga as exercise. Janusirsasana is a variant with one knee bent out to the side; Upavishthakonasana has the legs straight and wide apart. Etymology and origins The name Paschimottanasana comes from three Sanskrit words.
+HEALTH BENEFITS: Blood Pressure, Energy
+GEN_Z_HOOK: Ancient biohacking, no subscription required. 🧘
+SOURCE: https://en.wikipedia.org/wiki/Paschimottanasana
+
+---
+
 TITLE: Siddha medicine
 DOMAIN: Ayurveda
 SUMMARY: Siddha medicine is a form of traditional medicine originating in southern India. It is one of the oldest systems of medicine in India. The Indian Medical Association regards Siddha medicine degrees as "fake" and Siddha therapies as quackery, posing a danger to national health due to absence of training in science-based medicine.
@@ -529,7 +772,7 @@ SOURCE: https://en.wikipedia.org/wiki/Naturopathy
 TITLE: Indian cuisine
 DOMAIN: Home Remedies
 SUMMARY: Indian cuisine consists of a variety of regional and traditional cuisines native to the Indian subcontinent. Given the diversity in soil, climate, culture, ethnic groups, and occupations, these cuisines vary substantially and use locally available ingredients. Indian food has been influenced by religion, cultural choices and traditions.
-INGREDIENTS: Ghee, Ginger, Honey, Cinnamon, Mustard, Cumin, Peppercorn, Cardamom, Saffron, Coconut Oil, Curry Leaves, Coriander, Sandalwood, Black Pepper, Fenugreek, Clove, Haldi, Adrak, Nutmeg, Rose Water, Garlic, Turmeric, Lemon, Milk
+INGREDIENTS: Rose Water, Sandalwood, Black Pepper, Adrak, Fenugreek, Coriander, Ghee, Haldi, Honey, Cumin, Garlic, Clove, Coconut Oil, Milk, Saffron, Ginger, Cinnamon, Peppercorn, Turmeric, Cardamom, Nutmeg, Mustard, Lemon, Curry Leaves
 HEALTH BENEFITS: Digestion, Cold, Kidney
 DOSHA: Vata
 GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
@@ -540,7 +783,7 @@ SOURCE: https://en.wikipedia.org/wiki/Indian_cuisine
 TITLE: Ghee
 DOMAIN: Food & Culture
 SUMMARY: Ghee (Hindi: घी) is a type of clarified butter, originating from India. It is commonly used for cooking, as a traditional medicine, and for Hindu religious rituals. Description Ghee is typically prepared by simmering butter, skimming any impurities from the surface, then pouring and retaining the clear liquid fat while discarding the solid residue that settles at the bottom.
-INGREDIENTS: Ghee, Mustard, Honey, Garlic, Turmeric, Curry Leaves, Milk, Cumin
+INGREDIENTS: Ghee, Honey, Cumin, Mustard, Garlic, Curry Leaves, Milk, Turmeric
 HEALTH BENEFITS: Skin, Cholesterol, Heart
 SCIENCE: Antioxidant: Fights free radicals / cell aging
 GEN_Z_HOOK: This carries 3000 years of ancestral memory. No cap. 🌶️
@@ -551,7 +794,7 @@ SOURCE: https://en.wikipedia.org/wiki/Ghee
 TITLE: Sattvic diet
 DOMAIN: Ayurveda
 SUMMARY: A sattvic diet (sometimes referred to as a yogic diet in modern literature) is a type of plant-based diet within Ayurveda where food is divided into three yogic qualities (guna) known as sattva. In this system of dietary classification, foods that decrease the energy of the body are considered tamasic, while those that increase the energy of the body are considered rajasic. A sattvic diet shares the qualities of sattva, some of which include "pure, essential, natural, vital, energy-containing, clean, conscious, true, honest, wise".
-INGREDIENTS: Adrak, Ashwagandha, Ghee, Black Pepper, Mustard, Ginger, Coriander, Honey, Fenugreek, Tulsi, Cardamom, Haldi, Turmeric, Saffron, Garlic, Cinnamon, Milk, Cumin
+INGREDIENTS: Ghee, Haldi, Cardamom, Tulsi, Honey, Saffron, Ginger, Cinnamon, Cumin, Mustard, Fenugreek, Black Pepper, Garlic, Adrak, Ashwagandha, Milk, Turmeric, Coriander
 HEALTH BENEFITS: Digestion, Stress, Skin, Pain, Energy
 GEN_Z_HOOK: Your ancestors had personalised medicine 5000 years before Goop. 💚
 SOURCE: https://en.wikipedia.org/wiki/Sattvic_diet
@@ -561,7 +804,7 @@ SOURCE: https://en.wikipedia.org/wiki/Sattvic_diet
 TITLE: Spice
 DOMAIN: Home Remedies
 SUMMARY: In the culinary arts, a spice is a seed, fruit, root, bark, or other plant substance primarily used for flavouring or colouring food. Spices are distinguished from herbs, which are the leaves, flowers, or stems of plants used for flavouring or as a garnish. Spices are sometimes used in medicine, religious rituals, cosmetics, or perfume production.
-INGREDIENTS: Black Pepper, Nutmeg, Ginger, Coriander, Clove, Cardamom, Saffron, Garlic, Cumin, Cinnamon, Long Pepper, Peppercorn, Mustard
+INGREDIENTS: Saffron, Cardamom, Ginger, Cinnamon, Cumin, Nutmeg, Mustard, Black Pepper, Long Pepper, Clove, Garlic, Peppercorn, Coriander
 HEALTH BENEFITS: Pain
 SCIENCE: Antimicrobial: Kills microorganisms
 GEN_Z_HOOK: Kitchen pharmacies that actually work — no side effects attached. 🍯
@@ -589,7 +832,7 @@ SOURCE: https://en.wikipedia.org/wiki/Zero_Budget_Natural_Farming
 TITLE: Organic farming
 DOMAIN: Sustainable Farming
 SUMMARY: Organic farming, also known as organic agriculture or ecological farming, or biological farming, is an agricultural system that emphasizes the use of naturally occurring, non-synthetic inputs, such as compost manure, green manure, and bone meal and places emphasis on techniques such as crop rotation, companion planting, and mixed cropping. Biological pest control methods, such as the fostering of insect predators, are also encouraged. Organic agriculture can be defined as "an integrated farming system that strives for sustainability, the enhancement of soil fertility and biological diversity while, with rare exceptions, prohibiting synthetic pesticides, antibiotics, synthetic fertilizers, genetically modified organisms, and growth hormones".
-INGREDIENTS: Garlic, Clove, Neem, Milk
+INGREDIENTS: Garlic, Milk, Clove, Neem
 HEALTH BENEFITS: Stress, Pain, Cold, Energy, Kidney
 GEN_Z_HOOK: Zero-waste farming, invented before zero-waste was a trend. 🌱
 SOURCE: https://en.wikipedia.org/wiki/Organic_farming
@@ -608,7 +851,7 @@ SOURCE: https://en.wikipedia.org/wiki/Biodynamic_agriculture
 TITLE: Crop rotation
 DOMAIN: Sustainable Farming
 SUMMARY: Crop rotation is the practice of growing a series of different types of crops in the same area across a sequence of growing seasons. This practice reduces the reliance of crops on one set of nutrients, pest and weed pressure, along with the probability of developing resistant pests and weeds. Growing the same crop in the same place for many years in a row, known as monocropping, gradually depletes the soil of certain nutrients and promotes the proliferation of specialized pest and weed populations adapted to that crop system.
-INGREDIENTS: Clove, Milk
+INGREDIENTS: Milk, Clove
 HEALTH BENEFITS: Stress
 GEN_Z_HOOK: Zero-waste farming, invented before zero-waste was a trend. 🌱
 SOURCE: https://en.wikipedia.org/wiki/Crop_rotation
@@ -664,7 +907,7 @@ SOURCE: https://en.wikipedia.org/wiki/Vedic_Mathematics
 TITLE: Rangoli
 DOMAIN: Oral History
 SUMMARY: Rangoli is an art form that originates from the Indian subcontinent, in which patterns are created on the floor or a tabletop using materials such as powdered limestone, red ochre, dry rice flour, coloured sand, quartz powder, flower petals, and coloured rocks. It is an everyday practice in some Hindu households; however, making it is mostly reserved for festivals and other important celebrations, as rangolis are time-consuming. Rangolis are usually made during Diwali or Tihar, Onam, Pongal, Ugadi and other Hindu festivals in the Indian subcontinent, and are most often made during Diwali.
-INGREDIENTS: Turmeric, Tulsi
+INGREDIENTS: Tulsi, Turmeric
 HEALTH BENEFITS: Pain
 GEN_Z_HOOK: This survived 40 generations. Hear it before it disappears. 📖
 SOURCE: https://en.wikipedia.org/wiki/Rangoli
