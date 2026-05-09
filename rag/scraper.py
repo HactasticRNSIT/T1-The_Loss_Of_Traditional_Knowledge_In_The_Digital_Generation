@@ -1,20 +1,4 @@
 """
-╔══════════════════════════════════════════════════════════════════════╗
-║     DADI KI BAATEIN — Knowledge Base Builder v3.0                    ║
-║     Handles JS-rendered sites + Wikipedia API + Seed Data            ║
-╚══════════════════════════════════════════════════════════════════════╝
-
-INSTALL DEPENDENCIES FIRST:
-    pip install requests beautifulsoup4 lxml tqdm wikipedia-api selenium
-
-FOR JS SITES (indianculture.gov.in):
-    Install ChromeDriver: https://chromedriver.chromium.org/
-    OR run in --no-selenium mode which uses Wikipedia + seed data only
-
-USAGE:
-    python knowledge_scraper_v2.py              # full mode (needs ChromeDriver)
-    python knowledge_scraper_v2.py --no-selenium # Wikipedia + seed only
-"""
 
 import requests
 import json
@@ -236,7 +220,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "All doshas (tridoshic)",
         "seasonal_relevance": "Winter",
         "modern_relevance": ["Immunity Boosting", "Anti-aging", "Sleep Wellness"],
-        "gen_z_hook": "Golden Milk was trending on TikTok in 2020 — your dadi was making it in 1960 💛",
+        "gen_z_hook": "Golden Milk was trending on TikTok in 2020 — your dadi was making it in 1960 ",
         "source_name": "Traditional Ayurvedic Knowledge (Seed)",
         "source_url": "https://www.tkdl.res.in",
         "keywords": ["turmeric", "curcumin", "haldi", "golden milk", "immunity", "inflammation"],
@@ -265,7 +249,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "Vata, Kapha",
         "seasonal_relevance": "Monsoon, Winter",
         "modern_relevance": ["Immunity Boosting", "Mental Health", "Gut Health"],
-        "gen_z_hook": "Adaptogens are a $14 billion wellness industry. Tulsi did it first, for free, in your courtyard 🌿",
+        "gen_z_hook": "Adaptogens are a $14 billion wellness industry. Tulsi did it first, for free, in your courtyard ",
         "source_name": "TKDL Traditional Knowledge (Seed)",
         "source_url": "https://www.tkdl.res.in",
         "keywords": ["tulsi", "holy basil", "adaptogen", "eugenol", "stress", "antiviral"],
@@ -295,7 +279,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "Vata, Kapha",
         "seasonal_relevance": "Winter",
         "modern_relevance": ["Mental Health", "Fitness & Yoga", "Immunity Boosting", "Sleep Wellness"],
-        "gen_z_hook": "Andrew Huberman's top supplement? Ashwagandha. Your great-great-grandmother's top supplement? Also Ashwagandha. 🐴",
+        "gen_z_hook": "Andrew Huberman's top supplement? Ashwagandha. Your great-great-grandmother's top supplement? Also Ashwagandha. ",
         "source_name": "Ayurvedic Classical Texts (Seed)",
         "source_url": "https://www.tkdl.res.in",
         "keywords": ["ashwagandha", "withania", "withanolide", "adaptogen", "cortisol", "rasayana"],
@@ -357,7 +341,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "Kapha (especially beneficial)",
         "seasonal_relevance": "All seasons",
         "modern_relevance": ["Fitness & Yoga", "Gut Health", "Mental Health", "Detox"],
-        "gen_z_hook": "Free, equipment-free metabolism hack your ancestors used before Ozempic existed 💨",
+        "gen_z_hook": "Free, equipment-free metabolism hack your ancestors used before Ozempic existed ",
         "source_name": "Hatha Yoga Pradipika (Seed)",
         "source_url": "https://www.yogamdniy.nic.in",
         "keywords": ["kapalbhati", "pranayama", "breathing", "metabolism", "kapal", "skull shining"],
@@ -389,7 +373,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "All doshas",
         "seasonal_relevance": "All seasons",
         "modern_relevance": ["Mental Health", "Sleep Wellness", "Fitness & Yoga"],
-        "gen_z_hook": "Box breathing for Navy SEALs is basically Anulom Vilom. We just named it better. 🫁",
+        "gen_z_hook": "Box breathing for Navy SEALs is basically Anulom Vilom. We just named it better. ",
         "source_name": "Yoga Sutras of Patanjali (Seed)",
         "source_url": "https://www.yogamdniy.nic.in",
         "keywords": ["anulom vilom", "nadi shodhana", "alternate nostril", "pranayama", "brain balance"],
@@ -419,7 +403,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "Pitta, Kapha",
         "seasonal_relevance": "Summer, Monsoon",
         "modern_relevance": ["Skincare", "Haircare", "Immunity Boosting", "Sustainability"],
-        "gen_z_hook": "The most researched plant on Earth grows for free in every Indian village. No patent possible. 🌳",
+        "gen_z_hook": "The most researched plant on Earth grows for free in every Indian village. No patent possible. ",
         "source_name": "TKDL + Charaka Samhita (Seed)",
         "source_url": "https://www.tkdl.res.in",
         "keywords": ["neem", "azadirachta", "nimbin", "antibacterial", "dental", "skin", "village pharmacy"],
@@ -453,7 +437,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "All doshas",
         "seasonal_relevance": "All seasons (sunrise practice)",
         "modern_relevance": ["Fitness & Yoga", "Mental Health", "Metabolism", "Sustainability"],
-        "gen_z_hook": "A 5000-year-old HIIT routine that needs no gym membership or equipment. 🌅",
+        "gen_z_hook": "A 5000-year-old HIIT routine that needs no gym membership or equipment. ",
         "source_name": "Traditional Yoga Texts (Seed)",
         "source_url": "https://www.yogamdniy.nic.in",
         "keywords": ["surya namaskar", "sun salutation", "yoga", "full body", "sequence", "morning routine"],
@@ -514,7 +498,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "All doshas (tridoshic)",
         "seasonal_relevance": "Winter, Monsoon",
         "modern_relevance": ["Immunity Boosting", "Mental Health", "Skincare", "Energy"],
-        "gen_z_hook": "The world's oldest known health supplement is Indian and is 2600 years old. SuperGreens can sit down. 🍃",
+        "gen_z_hook": "The world's oldest known health supplement is Indian and is 2600 years old. SuperGreens can sit down. ",
         "source_name": "Charaka Samhita + TKDL (Seed)",
         "source_url": "https://www.tkdl.res.in",
         "keywords": ["chyawanprash", "amla", "rasayana", "immunity", "vitamin c", "superfood", "charaka"],
@@ -546,7 +530,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "All doshas",
         "seasonal_relevance": "All seasons (adjustments per season)",
         "modern_relevance": ["Mental Health", "Sleep Wellness", "Gut Health", "Skincare", "Fitness & Yoga"],
-        "gen_z_hook": "Biohackers spend $10,000 on devices to optimise what Ayurveda nailed 3000 years ago for free. 🕰️",
+        "gen_z_hook": "Biohackers spend $10,000 on devices to optimise what Ayurveda nailed 3000 years ago for free. ",
         "source_name": "Ashtanga Hridayam (Seed)",
         "source_url": "https://www.tkdl.res.in",
         "keywords": ["dinacharya", "daily routine", "oil pulling", "abhyanga", "circadian", "tongue scraping", "brahma muhurta"],
@@ -575,7 +559,7 @@ SEED_KNOWLEDGE = [
         ],
         "seasonal_relevance": "All seasons",
         "modern_relevance": ["Sustainability", "Climate Resilience", "Zero-waste"],
-        "gen_z_hook": "Regenerative farming is trending in Silicon Valley. Indian farmers invented it 5000 years ago. 🐄",
+        "gen_z_hook": "Regenerative farming is trending in Silicon Valley. Indian farmers invented it 5000 years ago. ",
         "source_name": "Subhash Palekar ZBNF + Vedic Agricultural Texts (Seed)",
         "source_url": "https://zerobudgetfarming.com",
         "keywords": ["zbnf", "natural farming", "jeevamrit", "subhash palekar", "cow dung", "organic", "regenerative"],
@@ -607,7 +591,7 @@ SEED_KNOWLEDGE = [
         "dosha_type": "Vata (primary), all doshas with appropriate oil",
         "seasonal_relevance": "All seasons",
         "modern_relevance": ["Skincare", "Sleep Wellness", "Mental Health", "Fitness & Yoga"],
-        "gen_z_hook": "Luxury spas charge ₹5000 for what your dadi called Tuesday morning. 🫒",
+        "gen_z_hook": "Luxury spas charge ₹5000 for what your dadi called Tuesday morning. ",
         "source_name": "Charaka Samhita + Ashtanga Hridayam (Seed)",
         "source_url": "https://www.tkdl.res.in",
         "keywords": ["abhyanga", "self massage", "sesame oil", "vata", "daily routine", "lymphatic", "skin"],
@@ -659,14 +643,14 @@ def generate_dadi_story(title: str, summary: str, domain: str) -> str:
     return f"{intro}{summary[:400]}{closing}"
 
 GEN_Z_HOOKS = {
-    "Ayurveda":           "Your ancestors had personalised medicine 5000 years before Goop. 💚",
-    "Yoga":               "Ancient biohacking, no subscription required. 🧘",
-    "Home Remedies":      "Kitchen pharmacies that actually work — no side effects attached. 🍯",
-    "Food & Culture":     "This carries 3000 years of ancestral memory. No cap. 🌶️",
-    "Sustainable Farming":"Zero-waste farming, invented before zero-waste was a trend. 🌱",
-    "Oral History":       "This survived 40 generations. Hear it before it disappears. 📖",
-    "Ancient Astronomy":  "They mapped the cosmos without telescopes. Lowkey insane. ✨",
-    "Vedic Mathematics":  "Mental math shortcuts that make calculators look slow. 🧮",
+    "Ayurveda":           "Your ancestors had personalised medicine 5000 years before Goop. ",
+    "Yoga":               "Ancient biohacking, no subscription required. ",
+    "Home Remedies":      "Kitchen pharmacies that actually work — no side effects attached. ",
+    "Food & Culture":     "This carries 3000 years of ancestral memory. No cap. ",
+    "Sustainable Farming":"Zero-waste farming, invented before zero-waste was a trend. ",
+    "Oral History":       "This survived 40 generations. Hear it before it disappears. ",
+    "Ancient Astronomy":  "They mapped the cosmos without telescopes. Lowkey insane. ",
+    "Vedic Mathematics":  "Mental math shortcuts that make calculators look slow. ",
     "Siddha":             "Tamil medicine was practised for 10,000 years before colonisation tried to erase it. 🌺",
     "Unani":              "The world's first universal healthcare system, from Hakim to patient. 🌿",
 }
